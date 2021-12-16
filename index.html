@@ -10,10 +10,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
-    <title>bootstrap</title>
+    <title>frontend</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="#">Logo <i class="fa fa-grav" aria-hidden="true"></i></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,35 +43,107 @@
                     </form>
                 </div>
         </div>
-    </nav>
-    <div class="offcanvas offcanvas-start show" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+    </nav> -->
+    <!--!! offcanvas -->
+    <!-- <div class="offcanvas offcanvas-start show" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
+            <h5 class="offcanvas-title" id="offcanvasLabel">Правила!</h5>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
         </div>
         <div class="offcanvas-body">
-            fixed the js file and added some more components
+            Перед началом правок и добавок, согласовываем темы
         </div>
-    </div>
+    </div> -->
+        <!--!! header -->
     <header class="header d-flex align-items-center">
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h1 class="text-success">Hello ,Welcome To My Planet</h1>
-                    <p class="text-light">cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                    </p>
-                    <button type="button" class="btn btn-success btn-lg">See more</button>
+                    <h1 class="text-success">Приветсвуем на этом ресурсе</h1>
+                    <!-- <p class="text-light">cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p> -->
+                    <!-- <button type="button" class="btn btn-success btn-lg">See more</button> -->
                 </div>
             </div>
         </div>
     </header>
-    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <!-- <div class="alert alert-warning alert-dismissible fade show" role="alert">
         <strong>Holy guacamole!</strong>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias velit deleniti sapiente voluptatibus. Voluptatibus magnam unde repudiandae fuga ullam nisi, porro et sint, debitis qui eum est, culpa atque tempore.
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-    </div>
+    </div> -->
     <main>
-        <div id="about" class="about border-bottom border-success">
+        <div id="portfolio" class="portfolio border-bottom border-success">
+            <div class="container py-5">
+                <h2 class="text-center mb-4">Them <i class="fa fa-briefcase" aria-hidden="true"></i></h2>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <h3>JS</h3>
+                        <a href="#isPrime">Проверка на простое число</a>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <h3>HTML + JS</h3>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    <span id=isPrime >Проверка на простое число</span>
+                </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>Функция определяет простое число или нет (в поле number введите число для проверки)</strong><br>
+                    number = 73;<br>
+                    isPrime = true;<br>
+                    <br>
+                    for(i=2; i&lt;number; i++){<br>
+                            ostatok = number%i;<br>
+                            if(ostatok === 0){<br>
+                            console.log(&#x60;${number} % ${i} = ${ostatok}&#x60;);<br>
+                                    isPrime = false;<br>
+                            console.log(&#x60;this is prime: ${isPrime}&#x60;);<br>
+                            break<br>
+                            }else{<br>
+                            console.log(&#x60;${number} % ${i} = ${ostatok}&#x60;);<br>
+                            console.log(&#x60;this is prime: ${isPrime}&#x60;);<br>
+                            break<br>
+                        }<br>
+                    }<br>
+                    <!-- <code>.accordion-body</code>, хотя переход ограничивает переполнение. -->
+                </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Элемент аккордеона #2
+                </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>Это тело аккордеона второго элемента.</strong> По умолчанию он скрыт, пока плагин свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого элемента. Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью переходов CSS. Вы можете изменить все это с помощью собственного CSS или переопределить наши переменные по умолчанию. Также стоит отметить, что практически любой HTML может быть помещен в <code>.accordion-body</code>, хотя переход ограничивает переполнение.
+                </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Элемент аккордеона #3
+                </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>Это тело аккордеона третьего элемента.</strong> По умолчанию оно скрыто, пока плагин свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого элемента. Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью переходов CSS. Вы можете изменить все это с помощью собственного CSS или переопределить наши переменные по умолчанию. Также стоит отметить, что практически любой HTML может быть помещен в <code>.accordion-body</code>, хотя переход ограничивает переполнение.
+                </div>
+                </div>
+            </div>
+            </div>
+        <!-- <div id="about" class="about border-bottom border-success">
             <div class="container py-5">
                 <h2 class="text-center mb-4">About <i class="fa fa-address-card" aria-hidden="true"></i></h2>
                 <div class="row">
@@ -79,37 +151,30 @@
                         <img class="border border-success rounded-circle img-fluid" src="img/avatar.png" alt="avatar">
                     </div>
                     <div class="col-md-10">
-                        <h3>Mt. Alien <i class="fa fa-rocket" aria-hidden="true"></i></h3>
+                        <h3>Mt. Ihor <i class="fa fa-rocket" aria-hidden="true"></i></h3>
                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam cupiditate voluptate illum illo rerum officiis laboriosam, repellendus sed perspiciatis enim dolorem tempora, reprehenderit voluptas, quam amet debitis neque adipisci asperiores!
                         </p>
                     </div>
                 </div>
             </div>
-        </div>
-    </main>
-    <div id="portfolio" class="portfolio border-bottom border-success">
-        <div class="container py-5">
-            <h2 class="text-center mb-4">Portfolio <i class="fa fa-briefcase" aria-hidden="true"></i></h2>
-            <div class="row">
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <img class="img-fluid sm-12 mb-4 lg-4" src="img/portfolio/portfolio-1.png" alt="portfolio">
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <img class="img-fluid sm-12 mb-4 lg-4" src="img/portfolio/portfolio-2.png" alt="portfolio">
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <img class="img-fluid sm-12 mb-4 lg-4" src="img/portfolio/portfolio-3.png" alt="portfolio">
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <img class="img-fluid sm-12 mb-4 lg-4" src="img/portfolio/portfolio-4.png" alt="portfolio">
-                </div>
-                <div class="col-sm-12 col-md-6 col-lg-4">
-                    <img class="img-fluid sm-12 mb-4 lg-4" src="img/portfolio/portfolio-5.png" alt="portfolio">
+        </div> -->
+        <!-- <div id="about" class="about border-bottom border-success">
+            <div class="container py-5">
+                <h2 class="text-center mb-4">About <i class="fa fa-address-card" aria-hidden="true"></i></h2>
+                <div class="row">
+                    <div class="col-md-2">
+                        <img class="border border-success rounded-circle img-fluid" src="img/avatar.png" alt="avatar">
+                    </div>
+                    <div class="col-md-10">
+                        <h3>Mt. Bogdan <i class="fa fa-rocket" aria-hidden="true"></i></h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam cupiditate voluptate illum illo rerum officiis laboriosam, repellendus sed perspiciatis enim dolorem tempora, reprehenderit voluptas, quam amet debitis neque adipisci asperiores!
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <div id="blog" class="blog border-bottom border-success">
+        </div> -->
+    </main>
+    <!-- <div id="blog" class="blog border-bottom border-success">
         <div class="container py-5">
             <h2 class="text-center mb-4">Blog <i class="fa fa-comments-o" aria-hidden="true"></i></h2>
             <div class="row">
@@ -145,8 +210,8 @@
                 </div>
             </div>
         </div>        
-    </div>
-    <div class="carousel border-bottom border-success">
+    </div> -->
+    <!-- <div class="carousel border-bottom border-success">
         <div class="container py-5">
             <h2 class="text-center mb-4">Slider <i class="fa fa-slideshare" aria-hidden="true"></i></h2>
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
@@ -194,7 +259,7 @@
                 <button class="btn btn-success" type="submit">Send</button>
             </div>
         </div>
-    </div>
+    </div> -->
     <div class="text-light py-3 bg-dark" style="background-color: rgba(0, 0, 0, 0.05);">
         <div class="container">
             <p class="small copyright"><span style="color: rgba(255, 255, 255, 0.486);">© 2021 Copyright:</span></p>
