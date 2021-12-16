@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>bootstrap</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Logo <i class="fa fa-grav" aria-hidden="true"></i></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#About">About <i class="fa fa-address-card" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Portfolio">Portfolio <i class="fa fa-briefcase" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Blog">Blog <i class="fa fa-comments-o" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Contact">Contact <i class="fa fa-phone" aria-hidden="true"></i></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Contact">Slider <i class="fa fa-slideshare" aria-hidden="true"></i></a>
+                        </li>
+                    </ul>
+                    <form class="d-flex">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+        </div>
+    </nav>
+    <div class="offcanvas offcanvas-start show" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
+        </div>
+        <div class="offcanvas-body">
+            fixed the js file and added some more components
+        </div>
+    </div>
+    <header class="header d-flex align-items-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h1 class="text-success">Hello ,Welcome To My Planet</h1>
+                    <p class="text-light">cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                    <button type="button" class="btn btn-success btn-lg">See more</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Holy guacamole!</strong>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias velit deleniti sapiente voluptatibus. Voluptatibus magnam unde repudiandae fuga ullam nisi, porro et sint, debitis qui eum est, culpa atque tempore.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <main>
+        <div id="about" class="about border-bottom border-success">
+            <div class="container py-5">
+                <h2 class="text-center mb-4">About <i class="fa fa-address-card" aria-hidden="true"></i></h2>
+                <div class="row">
+                    <div class="col-md-2">
+                        <img class="border border-success rounded-circle img-fluid" src="img/avatar.png" alt="avatar">
+                    </div>
+                    <div class="col-md-10">
+                        <h3>Mt. Alien <i class="fa fa-rocket" aria-hidden="true"></i></h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam cupiditate voluptate illum illo rerum officiis laboriosam, repellendus sed perspiciatis enim dolorem tempora, reprehenderit voluptas, quam amet debitis neque adipisci asperiores!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="portfolio" class="portfolio border-bottom border-success">
+        <div class="container py-5">
+            <h2 class="text-center mb-4">Portfolio <i class="fa fa-briefcase" aria-hidden="true"></i></h2>
+            <div class="row">
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <img class="img-fluid sm-12 mb-4 lg-4" src="img/portfolio/portfolio-1.png" alt="portfolio">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <img class="img-fluid sm-12 mb-4 lg-4" src="img/portfolio/portfolio-2.png" alt="portfolio">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <img class="img-fluid sm-12 mb-4 lg-4" src="img/portfolio/portfolio-3.png" alt="portfolio">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <img class="img-fluid sm-12 mb-4 lg-4" src="img/portfolio/portfolio-4.png" alt="portfolio">
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-4">
+                    <img class="img-fluid sm-12 mb-4 lg-4" src="img/portfolio/portfolio-5.png" alt="portfolio">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="blog" class="blog border-bottom border-success">
+        <div class="container py-5">
+            <h2 class="text-center mb-4">Blog <i class="fa fa-comments-o" aria-hidden="true"></i></h2>
+            <div class="row">
+                <div class=" col-sm-12 col-md-6 col-lg-4">
+                    <img src="img/blog/blog-news-1.jpeg" class="card-img-top img-fluid sm-12 mb-4 lg-4" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">Заголовок карточки</h5>
+                        <p class="card-text">Небольшой пример текста, который должен основываться на названии карты и составлять основную часть содержимого карты.</p>
+                    </div>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Ссылка карточки</a>
+                    </div>
+                </div>
+                <div class=" col-sm-12 col-md-6 col-lg-4">
+                    <img src="img/blog/blog-news-2.jpg" class="card-img-top img-fluid sm-12 mb-4 lg-4" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">Заголовок карточки</h5>
+                        <p class="card-text">Небольшой пример текста, который должен основываться на названии карты и составлять основную часть содержимого карты.</p>
+                    </div>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Ссылка карточки</a>
+                    </div>
+                </div>
+                <div class=" col-sm-12 col-md-6 col-lg-4">
+                    <img src="img/blog/blog-news-3.jpg" class="card-img-top img-fluid sm-12 mb-4 lg-4" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">Заголовок карточки</h5>
+                        <p class="card-text">Небольшой пример текста, который должен основываться на названии карты и составлять основную часть содержимого карты.</p>
+                    </div>
+                    <div class="card-body">
+                        <a href="#" class="card-link">Ссылка карточки</a>
+                    </div>
+                </div>
+            </div>
+        </div>        
+    </div>
+    <div class="carousel border-bottom border-success">
+        <div class="container py-5">
+            <h2 class="text-center mb-4">Slider <i class="fa fa-slideshare" aria-hidden="true"></i></h2>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="img/portfolio/portfolio-1.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/portfolio/portfolio-2.png" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/portfolio/portfolio-3.png" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Предыдущий</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Следующий</span>
+                    </button>
+                </div>
+        </div>
+    </div>
+    <div id="contact" class="contact">
+        <div class="column">
+            <div class="container py-5 col-lg-6">
+                <h2 class="text-center mb-4">Contact Me <i class="fa fa-phone" aria-hidden="true"></i></h2>
+                <div class="mb-4">
+                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Your Name">
+                </div>
+                <div class="mb-4">
+                    <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@example.com">
+                </div>
+                <div class="mb-4">
+                    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <button class="btn btn-success" type="submit">Send</button>
+            </div>
+        </div>
+    </div>
+    <div class="text-light py-3 bg-dark" style="background-color: rgba(0, 0, 0, 0.05);">
+        <div class="container">
+            <p class="small copyright"><span style="color: rgba(255, 255, 255, 0.486);">© 2021 Copyright:</span></p>
+        </div>
+    </div>
+    <script src="js/bootstrap.js"></script>
+</body>
+</html>
