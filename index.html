@@ -59,7 +59,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <h1 class="text-success">Приветсвуем на этом ресурсе</h1>
+                    <!-- <h1 class="text-success">Приветсвуем на этом ресурсе</h1> -->
                     <!-- <p class="text-light">cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </p> -->
                     <!-- <button type="button" class="btn btn-success btn-lg">See more</button> -->
@@ -77,28 +77,64 @@
             <div class="container py-5">
                 <h2 class="text-center mb-4">Them <i class="fa fa-briefcase" aria-hidden="true"></i></h2>
                 <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
                         <h3>JS</h3>
-                        <a href="#isPrime">Проверка на простое число</a>
+                        <ul>
+                            <h5>Функции для массивов</h5>
+                            <li><a href="#for">Создание нового массива с помощью простого цикла for
+                            </a></li>
+                            <li><a href="#for_push">Создание нового массива с помощью простого цикла for + .push</a></li>
+                            <li><a href="#recursion">Создание нового массив с помощью рекурсии</a></li>
+                            <li><a href="#flat">.flat() разложение многоуровневого массива в один уровень
+                            </a></li>
+                        </ul>
+                        <ul>
+                            <h5>Полезные функции</h5>
+                            <li><a href="#isPrime">Проверка на простое число</a></li>
+                            <li><a href="#doWhile">Цикл «do…while»</a></li>
+                            <li><a href="#break">Прерывание цикла: «break»</a></li>
+                            <li><a href="#random_1-10">Функция получения рандомного чиста (от 1 до 10)</a></li>
+                            <li><a href="#destruct">Деструктурирующее присваивание</a></li>
+
+                        </ul>
                     </div>
-                    <div class="col-sm-12 col-md-6 col-lg-6">
+                    <div class="col-sm-12 col-md-6 col-lg-4">
                         <h3>HTML + JS</h3>
-    
+                        <ul>
+                            <li></li>
+                        </ul>
                     </div>
+                    <div class="col-sm-12 col-md-6 col-lg-4">
+                        <h3>Links</h3>
+                            <ul>
+                                <li><a target="_blank" href="https://v3c.ru/soft/ekranirovanie-html">Экранирование кода JS для вставки в HTML</a></li>
+                                <li><a href="https://validator.w3.org/#validate_by_input">Валидатор HTML</a></li>
+                                <li><a href="https://jigsaw.w3.org/css-validator/#validate_by_input">Валидатор CSS</a></li>
+                                <li><a href="https://autoprefixer.github.io/ru/">Автопрефиксер</a></li>
+                                <li><a href="http://howtocenterincss.com/">Помощь в центрировании обьектов</a></li>
+                                <li><a href="https://basicweb.ru/css/flexbox_generator.php">Конструктор Flexbox</a></li>
+                                <li><a href="https://basicweb.ru/css/grid_generator.php">Конструктор Grid</a></li>
+                                <li><a href="https://css3gen.com/">CSS генератор кнопок, градиентов, бордеров,теней трансформации, фона, анимаций</a></li>
+                                <li><a href="https://aislam23.github.io/links/">Полезные ссылки для веб-разработчика</a></li>
+                            </ul>
+                    </div>
+                    
                 </div>
             </div>
         </div>
+            <!-- !!accordion -->
         <div class="accordion" id="accordionExample">
+            <!-- !!Проверка на простое число -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                     <span id=isPrime >Проверка на простое число</span>
                 </button>
                 </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <strong>Функция определяет простое число или нет (в поле number введите число для проверки)</strong><br>
-                    number = 73;<br>
+                    <code>number = 73;<br>
                     isPrime = true;<br>
                     <br>
                     for(i=2; i&lt;number; i++){<br>
@@ -113,36 +149,231 @@
                             console.log(&#x60;this is prime: ${isPrime}&#x60;);<br>
                             break<br>
                         }<br>
-                    }<br>
+                    }<br></code>
                     <!-- <code>.accordion-body</code>, хотя переход ограничивает переполнение. -->
                 </div>
                 </div>
             </div>
+            <!-- !!Цикл «do…while» -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingTwo">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    Элемент аккордеона #2
+                    <span id=doWhile >Цикл «do…while»</span>
                 </button>
                 </h2>
                 <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    <strong>Это тело аккордеона второго элемента.</strong> По умолчанию он скрыт, пока плагин свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого элемента. Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью переходов CSS. Вы можете изменить все это с помощью собственного CSS или переопределить наши переменные по умолчанию. Также стоит отметить, что практически любой HTML может быть помещен в <code>.accordion-body</code>, хотя переход ограничивает переполнение.
+                    <strong>Проверку условия можно разместить под телом цикла, используя специальный синтаксис do..while:</strong><br><code>do { <br>
+                        // тело цикла <br>
+                    } while (condition);</code> 
+                    <strong>Цикл сначала выполнит тело, а затем проверит условие condition, и пока его значение равно true, он будет выполняться снова и снова. <br>
+                        Например:</strong><br>
+                    <code>let i = 0;<br>
+                        do {<br>
+                          alert( i );<br>
+                          i++;<br>
+                        } while (i < 3);</code>
                 </div>
                 </div>
             </div>
+            <!-- !!Прерывание цикла: «break» -->
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    Элемент аккордеона #3
+                    <span id=break >Прерывание цикла: «break»</span>
                 </button>
                 </h2>
                 <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
-                    <strong>Это тело аккордеона третьего элемента.</strong> По умолчанию оно скрыто, пока плагин свертывания не добавит соответствующие классы, которые мы используем для стилизации каждого элемента. Эти классы управляют общим внешним видом, а также отображением и скрытием с помощью переходов CSS. Вы можете изменить все это с помощью собственного CSS или переопределить наши переменные по умолчанию. Также стоит отметить, что практически любой HTML может быть помещен в <code>.accordion-body</code>, хотя переход ограничивает переполнение.
+                    <strong>Обычно цикл завершается при вычислении условия в false. <br>
+                        Но мы можем выйти из цикла в любой момент с помощью специальной директивы break.
+                        Например, следующий код подсчитывает сумму вводимых чисел до тех пор, пока посетитель их вводит, а затем – выдаёт:</strong> <br>
+                        <code>let sum = 0; <br>
+                        while (true) {<br>
+                        let value = +prompt(&quot;Введите число&quot;, '');<br>
+                        if (!value) break; // (*)<br>
+                        sum += value;<br>
+                        }<br>
+                        alert( 'Сумма: ' + sum );</code> <br>
+                        <strong>Директива break в строке (*) полностью прекращает выполнение цикла и передаёт управление на строку за его телом, то есть на alert.
+                        Вообще, сочетание «бесконечный цикл + break» – отличная штука для тех ситуаций, когда условие, по которому нужно прерваться, находится не в начале или конце цикла, а посередине.</strong>
                 </div>
                 </div>
             </div>
+            <!-- !!Создание нового массива с помощью простого цикла for -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <span id=for >Создание нового массива с помощью простого цикла for</span>
+                </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>arr -  массив, который будет скопирован, arr_2 - новый массив </strong> <br>
+                        <code>arr = [<br>
+                            10,<br>
+                            [10,20,30],<br>
+                            [40,50,60],<br>
+                        ];<br>
+                        <br>
+                        arr_2 = [];<br>
+                        <br>
+                        for(i=0; i&lt;arr.length; i++){<br>
+                            if(Array.isArray(arr[i])){<br>
+                                newInnerArray = [];<br>
+                                currentArr = arr[i]; // [10,20,30]<br>
+                                <br>
+                                for(j=0; j&lt;currentArr.length; j++){<br>
+                                    newInnerArray[newInnerArray.length] = currentArr[j];<br>
+                                }<br>
+                                <br>
+                                arr_2[arr_2.length] = newInnerArray;<br>
+                            } else{<br>
+                                arr_2[arr_2.length] = arr[i];<br>
+                            }<br>
+                        }<br>
+                        <br>
+                        console.log(arr);<br>
+                        console.log(arr_2);<br>
+                        </code> <br>
+                </div>
+                </div>
             </div>
+            <!-- !!Создание нового массива с помощью простого цикла for + .push -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    <span id=for_push >Создание нового массива с помощью простого цикла for + .push </span>
+                </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>arr -  массив, который будет скопирован, arr_2 - новый массив </strong> <br>
+                        <code>arr = [<br>
+                            10,<br>
+                            [1,2,3],<br>
+                            [4,5,6],<br>
+                            'hello'<br>
+                        ];<br>
+                        <br>
+                        arr_2 = [];<br>
+                        <br>
+                        for(i=0; i&lt;arr.length; i++){<br>
+                            if(Array.isArray(arr[i])){<br>
+                                arr_2.push(arr[i].slice());<br>
+                            } else{<br>
+                                arr_2.push(arr[i]);<br>
+                            }<br>
+                        }<br>
+                        <br>
+                        console.log(arr);<br>
+                        console.log(arr_2);<br>
+                        <br>
+                        </code> <br>
+                </div>
+                </div>
+            </div>
+            <!-- !!Функция получения рандомного чиста (от 1 до 10) -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    <span id=recursion >Функция получения рандомного чиста (от 1 до 10)</span>
+                </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>Сама по себе, функция Math.random() возращает число от 0 до 1 с плавающей запятой, по этому чтоб получить целое число от 1 до 10 нужно воспользовать функцией округления Math.floor() и умножением на 10. Чтоб получить число от 1 до 100 и тд нужно изменять множитель соответсвенно.</strong> <br>
+                        <code>function randomNumber(){<br>
+                            number = Math.floor(Math.random()*10);<br>
+                            console.log(number);<br>
+                        }<br>
+                        sayHi();<br>
+                        </code> <br>
+                </div>
+                </div>
+            </div>
+            <!-- !!Создание нового массив с помощью рекурсии -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingSeven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                    <span id=recursion >Создание нового массив с помощью рекурсии</span>
+                </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong></strong> <br>
+                        <code>let arr = [<br>
+                            [1,2,3,[[true,false],'dog']],<br>
+                            [4,5,6],<br>
+                            7<br>
+                        ];<br>
+                        <br>                        
+                        function copiedArray(arr){<br>
+                            let newArr = [];<br>
+                            <br>
+                            for(let i=0; i&lt;arr.length; i++){<br>
+                                if(Array.isArray(arr[i])){<br>
+                                    newArr.push( copiedArray(arr[i]) );<br>
+                                } else{<br>
+                                    newArr.push(arr[i]);<br>
+                                }<br>
+                            }<br>
+                            <br>
+                            return newArr;<br>
+                        }<br>
+                        <br>
+                        let copyOfArr = copiedArray(arr);<br>
+                        <br>
+                        console.log(arr);<br>
+                        console.log(copyOfArr);<br>
+                        </code> <br>
+                </div>
+                </div>
+            </div>
+            <!-- !!.flat() разложение многоуровневого массива в один уровень -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingNine">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                    <span id=flat >.flat() разложение многоуровневого массива в один уровень</span>
+                </button>
+                </h2>
+                <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>.flat() в скобках нужно указать число, которое обозначаен на сколько уровненй углублятся для раскладки массива. Если указать знак бесконечности (∞), то массив любого уровня будет разложен в один уровень. </strong> <br>
+                        <code>
+                            let arr = [<br>
+                                [1,2,3, [10,20,30, [40,50,60]]],<br>
+                                [4,5,6]<br>
+                            ];<br>
+                            <br>
+                            let arrModified = arr<br>
+                                .flat(Infinity)<br>
+                                .map(function(item){<br>
+                                    return item;<br>
+                                })<br>
+                                <br>
+                            console.log(arrModified);
+                        </code> <br>
+                </div>
+                </div>
+            </div>
+            <!-- !!Деструктурирующее присваивание -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                    <span id=destruct >Деструктурирующее присваивание</span>
+                </button>
+                </h2>
+                <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <!-- <strong>.flat() в скобках нужно указать число, которое обозначаен на сколько уровненй углублятся для раскладки массива. Если указать знак бесконечности (∞), то массив любого уровня будет разложен в один уровень. </strong> <br> -->
+                        <code>let colors = ['red', 'green', 'blue', ['orange', 'purple'], {name: 'Anton'}];<br>    
+                        let [red,,,[orange, purple], {name:antonName} ] = colors;
+                        </code> <br>
+                </div>
+                </div>
+            </div>
+        </div>
         <!-- <div id="about" class="about border-bottom border-success">
             <div class="container py-5">
                 <h2 class="text-center mb-4">About <i class="fa fa-address-card" aria-hidden="true"></i></h2>
@@ -174,6 +405,74 @@
             </div>
         </div> -->
     </main>
+    <!-- let obj_1 = {
+        a: {
+            cat: {
+                name: 'Tom',
+                age: 7
+            },
+            mouse: 'Jerry',
+        },
+        b: 20,
+        c: 30
+    };
+    
+    let obj_2 = {
+        b: 50,
+        c: 60,
+        d: 70,
+        j: [10,20,30, [40,50, [60,70, {cat: 'Anfisa'}]]]
+    };
+    
+    console.log(obj_1);
+    console.log(obj_2);
+    
+    function copiedArray(arr){
+        let newArr = [];
+    
+        for(let key in arr){
+            if(Array.isArray(arr[key])){
+                newArr[key] = copiedArray(arr[key]);
+            } else if(typeof arr[key] === 'object'){
+                newArr[key] = copiedObject(arr[key]);
+            } else{
+                newArr[key] = arr[key];
+            }
+        }
+    
+        return newArr;
+    }
+    
+    function copiedObject(obj){
+        let newObj = {};
+    
+        for(let key in obj){
+            if(Array.isArray(obj[key])){
+                newObj[key] = copiedArray(obj[key]);
+            } else if(typeof obj[key] === 'object'){
+                newObj[key] = copiedObject(obj[key]);
+            } else{
+                newObj[key] = obj[key];
+            }
+        }
+    
+        return newObj;
+    }
+    
+    function concatObjects(...args){
+        //console.log(args);
+    
+        let copiedObjects = args
+            .map(function(obj){
+                return copiedObject(obj);
+            }); // [obj_1, obj_2]
+    
+        return Object.assign({}, ...copiedObjects);
+    }
+    
+    let resultObj = concatObjects(obj_1, obj_2);
+    console.log(resultObj);
+     -->
     <!-- <div id="blog" class="blog border-bottom border-success">
         <div class="container py-5">
             <h2 class="text-center mb-4">Blog <i class="fa fa-comments-o" aria-hidden="true"></i></h2>
