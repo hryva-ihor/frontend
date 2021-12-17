@@ -95,13 +95,15 @@
                             <li><a href="#break">Прерывание цикла: «break»</a></li>
                             <li><a href="#random_1-10">Функция получения рандомного чиста (от 1 до 10)</a></li>
                             <li><a href="#destruct">Деструктурирующее присваивание</a></li>
+                            <li><a href="#window_size">Актуальные размеры экрана</a></li>
 
+                        </span>
                         </ul>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-4">
                         <h3>HTML + JS</h3>
                         <ul>
-                            <li></li>
+                            <li><a href="#meta">meta теги для вставки в head</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-4">
@@ -373,37 +375,65 @@
                 </div>
                 </div>
             </div>
+            <!-- !!Актуальные размеры экрана -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingEleven">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                    <span id=window_size >Актуальные размеры экрана
+                    </span>
+                </button>
+                </h2>
+                <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <!-- <strong>.flat() в скобках нужно указать число, которое обозначаен на сколько уровненй углублятся для раскладки массива. Если указать знак бесконечности (∞), то массив любого уровня будет разложен в один уровень. </strong> <br> -->
+                        <code>window.onresize = () =&gt; {<br>
+                            console.log(&#x60;width = ${window.innerWidth}px&#x60;, &#x60;heigth = ${window.innerHeight}px&#x60;)<br>
+                        }<br>
+                        </code> <br>
+                </div>
+                </div>
+            </div>
+            <!-- !!meta теги для вставки в head -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwelve">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                    <span id=meta >meta теги для вставки в head</span>
+                </button>
+                </h2>
+                <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>Пример использования meta тегов для вставки в head</strong> <br>
+                        <code>&lt;head&gt; <br>
+
+                            &lt;meta charset=&quot;utf-8&quot;&gt; <br>
+                            &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt; <br>
+                            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1, shrink-to-fit=no&quot;&gt; <br>
+                            
+                            &lt;meta name=&quot;description&quot; <br>
+                            content=&quot;Мы воплощаем в жизнь хорошие идеи. Контент для любых задач.&quot;&gt; <br>
+                            
+                            
+                            &lt;meta property=&quot;og:url&quot; content=&quot;http://motionlight.io/&quot; /&gt; <br>
+                            &lt;meta property=&quot;og:type&quot; content=&quot;article&quot; /&gt; <br>
+                            &lt;meta property=&quot;og:title&quot; content=&quot;MOTINLIGHT - воплощаем в жизнь Ваши идеи&quot; /&gt; <br>
+                            &lt;meta property=&quot;og:description&quot; <br>
+                            content=&quot;Полноцветные LED экраны, Контент для любых задач, видеоборды, медиа-витрины&quot; /&gt; <br>
+                            &lt;meta property=&quot;og:image&quot; content=&quot;https://dita-group.com/ogg.png&quot; /&gt; <br>
+                            
+                            
+                            &lt;title&gt;DITA group - Ваш ключевой партнер по цифровым решениям&lt;/title&gt;<br> 
+                            
+                            
+                            &lt;link rel=&quot;shortcut icon&quot; href=&quot;favicon.ico&quot; type=&quot;image/x-icon&quot;&gt; <br>
+                            
+                            &lt;/head&gt; <br>
+                            &lt;/meta&gt;<br>
+                        }<br>
+                        </code>
+                </div>
+                </div>
+            </div>
         </div>
-        <!-- <div id="about" class="about border-bottom border-success">
-            <div class="container py-5">
-                <h2 class="text-center mb-4">About <i class="fa fa-address-card" aria-hidden="true"></i></h2>
-                <div class="row">
-                    <div class="col-md-2">
-                        <img class="border border-success rounded-circle img-fluid" src="img/avatar.png" alt="avatar">
-                    </div>
-                    <div class="col-md-10">
-                        <h3>Mt. Ihor <i class="fa fa-rocket" aria-hidden="true"></i></h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam cupiditate voluptate illum illo rerum officiis laboriosam, repellendus sed perspiciatis enim dolorem tempora, reprehenderit voluptas, quam amet debitis neque adipisci asperiores!
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- <div id="about" class="about border-bottom border-success">
-            <div class="container py-5">
-                <h2 class="text-center mb-4">About <i class="fa fa-address-card" aria-hidden="true"></i></h2>
-                <div class="row">
-                    <div class="col-md-2">
-                        <img class="border border-success rounded-circle img-fluid" src="img/avatar.png" alt="avatar">
-                    </div>
-                    <div class="col-md-10">
-                        <h3>Mt. Bogdan <i class="fa fa-rocket" aria-hidden="true"></i></h3>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsam cupiditate voluptate illum illo rerum officiis laboriosam, repellendus sed perspiciatis enim dolorem tempora, reprehenderit voluptas, quam amet debitis neque adipisci asperiores!
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div> -->
     </main>
     <!-- let obj_1 = {
         a: {
@@ -472,7 +502,7 @@
     
     let resultObj = concatObjects(obj_1, obj_2);
     console.log(resultObj);
-     -->
+    -->
     <!-- <div id="blog" class="blog border-bottom border-success">
         <div class="container py-5">
             <h2 class="text-center mb-4">Blog <i class="fa fa-comments-o" aria-hidden="true"></i></h2>
@@ -564,6 +594,35 @@
             <p class="small copyright"><span style="color: rgba(255, 255, 255, 0.486);">© 2021 Copyright:</span></p>
         </div>
     </div>
+    <!-- to top button -->
+    <button style="position: fixed;z-index: 99999; bottom: 20px; right: 20px; display: none;"
+        type="button" class="btn btn-danger btn-floating btn-lg" id="btn-back-to-top">to top
+    </button>
     <script src="js/bootstrap.js"></script>
+    <script>//Get the button
+        let mybutton = document.getElementById("btn-back-to-top");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction();
+        };
+        
+        function scrollFunction() {
+            if (
+            document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20
+            ) {
+            mybutton.style.display = "block";
+            } else {
+            mybutton.style.display = "none";
+            }
+        }
+        // When the user clicks on the button, scroll to the top of the document
+        mybutton.addEventListener("click", backToTop);
+        
+        function backToTop() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }</script>
 </body>
 </html>
