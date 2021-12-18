@@ -104,6 +104,8 @@
                         <h3>HTML + JS</h3>
                         <ul>
                             <li><a href="#meta">meta теги для вставки в head</a></li>
+                            <li><a href="#slider_hover_img">Слайдер с ховер эффектом на слайдах</a></li>
+                            <li><a href="#to_top">Кнопка "на верх" на чистом JS  и на Jquery</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-4">
@@ -429,6 +431,218 @@
                             &lt;/head&gt; <br>
                             &lt;/meta&gt;<br>
                         }<br>
+                        </code>
+                </div>
+                </div>
+            </div>
+            <!-- !!слайдер с ховер эффектом на слайдах -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThirteen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                    <span id=slider_hover_img >Слайдер с ховер эффектом на слайдах</span>
+                </button>
+                </h2>
+                <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>HTML</strong> <br>
+                        <code>&lt;!-- add a container div --&gt;<br>
+                            &lt;section class=&quot;test&quot;&gt;<br>
+                                &lt;div class=&quot;container&quot;&gt;<br>
+                                    &lt;div class=&quot;test__box&quot;&gt;<br>
+                                        &lt;div class=&quot;test__item&quot;&gt;<br>
+                                            &lt;div class=&quot;test__img&quot;&gt;<br>
+                                            &lt;/div&gt;<br>
+                                            &lt;div class=&quot;test__description&quot;&gt;<br>
+                                                &lt;h2 class=&quot;test__title&quot;&gt;<br>Img_1&lt;/h2&gt;<br>
+                                                &lt;p class=&quot;test__text&quot;&gt;<br>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                &lt;/p&gt;<br>
+                                            &lt;/div&gt;<br>
+                                        &lt;/div&gt;<br>
+                                        &lt;div class=&quot;test__item&quot;&gt;<br>
+                                            &lt;div class=&quot;test__img&quot;&gt;<br>
+                                            &lt;/div&gt;<br>
+                                            &lt;div class=&quot;test__description&quot;&gt;<br>
+                                                &lt;h2 class=&quot;test__title&quot;&gt;<br>Img_2&lt;/h2&gt;<br>
+                                                &lt;p class=&quot;test__text&quot;&gt;<br>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                &lt;/p&gt;<br>
+                                            &lt;/div&gt;<br>
+                                        &lt;/div&gt;<br>
+                                        &lt;div class=&quot;test__item&quot;&gt;<br>
+                                            &lt;div class=&quot;test__img&quot;&gt;<br>
+                                            &lt;/div&gt;<br>
+                                            &lt;div class=&quot;test__description&quot;&gt;<br>
+                                                &lt;h2 class=&quot;test__title&quot;&gt;<br>Img_3&lt;/h2&gt;<br>
+                                                &lt;p class=&quot;test__text&quot;&gt;<br>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                                &lt;/p&gt;<br>
+                                            &lt;/div&gt;<br>
+                                        &lt;/div&gt;<br>
+                                    &lt;/div&gt;<br>
+                                &lt;/div&gt;<br>
+                            &lt;/section&gt;<br>
+                        </code>
+                        <strong>CSS</strong><br>
+                        <code>
+                            .test {<br>
+                                &amp;__box {<br>
+                                    border-radius: 4px;<br>
+                                    overflow: hidden;<br>
+                                    background-color: gray;<br>
+                                    display: flex;<br>
+                                    flex-direction: row;<br>
+                                    position: relative;<br>
+                                }<br>
+                            
+                                &amp;__item {<br>
+                                    color: white;<br>
+                                    &amp;.off {<br>
+                                        z-index: 5;<br>
+                                        .test__img {<br>
+                                            opacity: 0;<br>
+                                        }<br>
+                                        .test__description {<br>
+                                            opacity: 0.7;<br>
+                                        }<br>
+                                    }<br>
+                                    width: calc(100% / 3);<br>
+                                    padding: 400px 30px 30px;<br>
+                                    height: 660px;<br>
+                                    position: relative;<br>
+                                    overflow: hidden;<br>
+                                    position: relative;<br>
+                                    z-index: 3;<br>
+                                    &amp;:nth-child(2) {<br>
+                                        &amp; .test__img {<br>
+                                            background-image: url(../img/img-bg-2.jpg);<br>
+                                            left: -100%;<br>
+                                        }<br>
+                                    }<br>
+                                    &amp;:nth-child(3) {<br>
+                                        &amp; .test__img {<br>
+                                            background-image: url(../img/img-bg-3.jpg);<br>
+                                            left: -200%;<br>
+                                        }<br>
+                                    }<br>
+                                    &amp;:hover {<br>
+                                        overflow: visible;<br>
+                                    }<br>
+                                }<br>
+                            
+                                &amp;__img {<br>
+                                    &amp; img {<br>
+                                        object-fit: cover;<br>
+                                        object-position: left top;<br>
+                                    }<br>
+                                    background-image: url(../img/img-bg.jpg);<br>
+                                    background-size: cover;<br>
+                                    background-position: center;<br>
+                                    z-index: 1;<br>
+                                    transition: opacity 0.5s ease;<br>
+                                    position: absolute;<br>
+                                    top: 0;<br>
+                                    left: 0;<br>
+                                    width: 300%;<br>
+                                    height: 100%;<br>
+                                }<br>
+                            
+                                &amp;__description {<br>
+                                    position: relative;<br>
+                                    z-index: 1;<br>
+                                    transition: opacity 0.5s ease;<br>
+                                }<br>
+                            
+                                &amp;__title {<br>
+                                    width: 100%;<br>
+                                    font-size: 28px;<br>
+                                    font-weight: bold;<br>
+                                    text-align: center;<br>
+                                }<br>
+                            
+                                &amp;__text {<br>
+                                    margin: 20px 0;<br>
+                                    font-size: 17px;<br>
+                                    text-align: center;<br>
+                                }<br>
+                            }<br>
+                        </code>
+                        <strong>JS</strong><br>
+                        <code>
+                            const sidehovers = document.querySelectorAll(&#x60;.<br>test__item&#x60;);<br>
+                            console.log(sidehovers)<br>
+
+                            sidehovers.forEach(function (item) {<br>
+                                item.onmouseover = () =&gt; {<br>
+                                    sidehovers.forEach(item =&gt; item.classList.add(&#x60;off&#x60;));<br>
+                                    item.classList.remove(&#x60;off&#x60;);<br>
+                                }<br>
+                            });<br>
+                            document.querySelector(&#x60;.test__box&#x60;).onmouseout = () =&gt; {<br>
+                                sidehovers.forEach(item =&gt; item.classList.remove(&#x60;off&#x60;));<br>
+                            }<br>
+                        </code>
+
+                </div>
+                </div>
+            </div>
+            <!-- !!кнопка "на верх" на чистом JS  и на Jquery -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFourteen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+                    <span id=to_top >Кнопка "на верх" на чистом JS  и на Jquery</span>
+                </button>
+                </h2>
+                <div id="collapseFourteen" class="accordion-collapse collapse" aria-labelledby="headingFourteen" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>HTML</strong> <br>
+                        <code>&lt;div class=&quot;to-up&quot;&gt;Наверх&lt;/div&gt;</code><br>
+                        <strong>CSS</strong><br>.to-up {<br>
+                            <code>.to-up {<br
+                            position: fixed;<br>
+                            bottom: 28px;<br>
+                            right: 28px;<br>
+                            display: none;<br>
+                            z-index: 22;<br>
+                            cursor: pointer;<br>
+                        }<br>
+                        </code>
+                        <strong>JS</strong><br>
+                        <code>
+                            document.addEventListener('DOMContentLoaded', () =&gt; {<br>
+
+                                let toTopBtn = document.querySelector('.to-up');<br>
+                            
+                                window.onscroll = function () {<br>
+                                    if (window.pageYOffset &gt; 580) {<br>
+                                        toTopBtn.style.display = 'block'<br>
+                                    } else {<br>
+                                        toTopBtn.style.display = 'none'<br>
+                                    }<br>
+                                }<br>
+                            
+                                // плавный скролл наверх <br>
+                                toTopBtn.addEventListener('click', function () {<br>
+                                    window.scrollBy({<br>
+                                        top: -document.documentElement.scrollHeight,<br>
+                                        behavior: 'smooth'<br>
+                                    });<br>
+                        </code>
+                        <strong>Jquery</strong><br>
+                        <code>
+                            jQuery(($) =&gt; {<br>
+                                $(window).scroll(function(){<br>
+                                    if ($(this).scrollTop() &gt; 780) $('.to-up').fadeIn();<br>
+                                    else $('.to-up').fadeOut();<br>
+                                });<br>
+                                $('.to-up').click(function(){<br>
+                                    $(&quot;html, body&quot;).animate({ scrollTop: 0 }, 566);<br>
+                                    return false;<br>
+                                });<br>
+                            });<br>
                         </code>
                 </div>
                 </div>
