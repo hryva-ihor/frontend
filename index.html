@@ -111,15 +111,39 @@
                     <div class="col-sm-12 col-md-6 col-lg-4">
                         <h3>Links</h3>
                             <ul>
+                                <h4>GIT</h4>
+                                <ul>
+                                    <li><a href="https://www.youtube.com/watch?v=nZYJKXXMvkM">Создание SSH ключа для работы с терминалом GIT</a></li>
+                                    <li><a href="https://gist.github.com/oleglomako/f34ad2098acba084f4ba344b780ed298">Основные команды GIT</a></li>
+                                </ul>
+                                <h4>Guide</h4>
+                                <ul>
+                                    <li><a href="https://htmlacademy.ru/blog/boost/frontend/git-console">Гайд GIT</a></li>
+                                </ul>
+                                <h4>Useful info</h4>
+                                <ul>
+                                    <li><a href="https://aislam23.github.io/links/">Полезные ссылки для веб-разработчика</a></li>
+                                    <li><a href="https://validator.w3.org/#validate_by_input">Валидатор HTML</a></li>
+                                    <li><a href="https://jigsaw.w3.org/css-validator/#validate_by_input">Валидатор CSS</a></li>
+                                    <li><a href="https://autoprefixer.github.io/ru/">Автопрефиксер</a></li>
+                                </ul>
                                 <li><a target="_blank" href="https://v3c.ru/soft/ekranirovanie-html">Экранирование кода JS для вставки в HTML</a></li>
-                                <li><a href="https://validator.w3.org/#validate_by_input">Валидатор HTML</a></li>
-                                <li><a href="https://jigsaw.w3.org/css-validator/#validate_by_input">Валидатор CSS</a></li>
-                                <li><a href="https://autoprefixer.github.io/ru/">Автопрефиксер</a></li>
-                                <li><a href="http://howtocenterincss.com/">Помощь в центрировании обьектов</a></li>
-                                <li><a href="https://basicweb.ru/css/flexbox_generator.php">Конструктор Flexbox</a></li>
-                                <li><a href="https://basicweb.ru/css/grid_generator.php">Конструктор Grid</a></li>
-                                <li><a href="https://css3gen.com/">CSS генератор кнопок, градиентов, бордеров,теней трансформации, фона, анимаций</a></li>
-                                <li><a href="https://aislam23.github.io/links/">Полезные ссылки для веб-разработчика</a></li>
+                                <h4>CSS</h4>
+                                <ul>
+                                    <li><a href="http://howtocenterincss.com/">Помощь в центрировании обьектов</a></li>
+                                    <li><a href="https://basicweb.ru/css/flexbox_generator.php">Конструктор Flexbox</a></li>
+                                    <li><a href="https://basicweb.ru/css/grid_generator.php">Конструктор Grid</a></li>
+                                    <li><a href="https://css3gen.com/">CSS генератор кнопок, градиентов, бордеров,теней трансформации, фона, анимаций</a></li>
+                                    <li><a href="https://stackoverflow.com/questions/4502633/how-to-affect-other-elements-when-one-element-is-hovered">Как ховером на один элемент влиять на другие </a></li>
+                                    <li><a href="https://www.w3schools.com/cssref/css_selectors.asp">Операторы CSS</a></li>
+                                    <li><a href="https://itchief.ru/html-and-css/selectors">Операторы CSS 2</a></li>
+                                </ul>
+                                <h4>JS</h4>
+                                <ul>
+                                    <li><a href="https://www.gavsblog.com/blog/detect-single-and-multiple-keypress-events-javascript">Поймать нажатие двух клавиш JS
+                                    </a></li>
+                                </ul>
+
                             </ul>
                     </div>
                     
@@ -600,8 +624,66 @@
                 <div class="accordion-body">
                     <strong>HTML</strong> <br>
                         <code>&lt;div class=&quot;to-up&quot;&gt;Наверх&lt;/div&gt;</code><br>
-                        <strong>CSS</strong><br>.to-up {<br>
-                            <code>.to-up {<br
+                        <strong>CSS</strong><br>
+                            <code>.to-up {<br>
+                            position: fixed;<br>
+                            bottom: 28px;<br>
+                            right: 28px;<br>
+                            display: none;<br>
+                            z-index: 22;<br>
+                            cursor: pointer;<br>
+                        }<br>
+                        </code>
+                        <strong>JS</strong><br>
+                        <code>
+                            document.addEventListener('DOMContentLoaded', () =&gt; {<br>
+
+                                let toTopBtn = document.querySelector('.to-up');<br>
+                            
+                                window.onscroll = function () {<br>
+                                    if (window.pageYOffset &gt; 580) {<br>
+                                        toTopBtn.style.display = 'block'<br>
+                                    } else {<br>
+                                        toTopBtn.style.display = 'none'<br>
+                                    }<br>
+                                }<br>
+                            
+                                // плавный скролл наверх <br>
+                                toTopBtn.addEventListener('click', function () {<br>
+                                    window.scrollBy({<br>
+                                        top: -document.documentElement.scrollHeight,<br>
+                                        behavior: 'smooth'<br>
+                                    });<br>
+                        </code>
+                        <strong>Jquery</strong><br>
+                        <code>
+                            jQuery(($) =&gt; {<br>
+                                $(window).scroll(function(){<br>
+                                    if ($(this).scrollTop() &gt; 780) $('.to-up').fadeIn();<br>
+                                    else $('.to-up').fadeOut();<br>
+                                });<br>
+                                $('.to-up').click(function(){<br>
+                                    $(&quot;html, body&quot;).animate({ scrollTop: 0 }, 566);<br>
+                                    return false;<br>
+                                });<br>
+                            });<br>
+                        </code>
+                </div>
+                </div>
+            </div>
+            <!-- !!кнопка "на верх" на чистом JS  и на Jquery -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFourteen">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+                    <span id=to_top >Кнопка "на верх" на чистом JS  и на Jquery</span>
+                </button>
+                </h2>
+                <div id="collapseFourteen" class="accordion-collapse collapse" aria-labelledby="headingFourteen" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <strong>HTML</strong> <br>
+                        <code>&lt;div class=&quot;to-up&quot;&gt;Наверх&lt;/div&gt;</code><br>
+                        <strong>CSS</strong><br>
+                            <code>.to-up {<br>
                             position: fixed;<br>
                             bottom: 28px;<br>
                             right: 28px;<br>
