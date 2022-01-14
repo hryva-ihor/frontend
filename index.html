@@ -76,7 +76,7 @@
     <main>
         <div id="portfolio" class="portfolio border-bottom border-success">
             <div class="container py-5">
-                <h2 class="text-center mb-4">Them <i class="fa fa-briefcase" aria-hidden="true"></i></h2>
+                <!-- <h2 class="text-center mb-4">Them <i class="fa fa-briefcase" aria-hidden="true"></i></h2> -->
                 <div class="row">
                     <div class="col-sm-12 col-md-6 col-lg-4">
                         <h3>JS</h3>
@@ -98,17 +98,24 @@
                             <li><a href="#destruct">Деструктурирующее присваивание</a></li>
                             <li><a href="#window_size">Актуальные размеры экрана</a></li>
                             <li><a href="#onLoad">Трекает когда сайт загружен</a></li>
-                        </span>
+                        </ul>
+                        <ul>
+                            <h5>Функции для обьектов</h5>
+                            <li><a href="#clone_obj">Клонирование обьекта</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-4">
                         <h3>HTML + JS</h3>
                         <ul>
-                            <li><a href="#meta">meta теги для вставки в head</a></li>
                             <li><a href="#slider_hover_img">Слайдер с ховер эффектом на слайдах</a></li>
                             <li><a href="#to_top">Кнопка "на верх" на чистом JS  и на Jquery</a></li>
                             <li><a href="#menu_close">Закрытие меню по клику на document + смена текста закрыть/открыть</a></li>
                             <li><a href="#text_aria_cacl">Счетчик количества введенных символов в textaria</a></li>
+                            <li><a href="#custom_vp">Kастомный видеоплеер</a></li>
+                        </ul>
+                        <h3>HTML</h3>
+                        <ul>
+                            <li><a href="#meta">meta теги для вставки в head</a></li>
                         </ul>
                     </div>
                     <div class="col-sm-12 col-md-6 col-lg-4">
@@ -133,9 +140,12 @@
                                     <li><a target="_blank" href="https://jigsaw.w3.org/css-validator/#validate_by_input">Валидатор CSS</a></li>
                                     <li><a target="_blank" href="https://autoprefixer.github.io/ru/">Автопрефиксер</a></li>
                                     <li><a target="_blank" target="_blank" href="https://v3c.ru/soft/ekranirovanie-html">Экранирование кода JS для вставки в HTML</a></li>
+                                    <li><a target="_blank" target="_blank" href="https://codepen.io/alphardex/pen/ExxQOWV?utm_source=telegram&utm_medium=social&utm_campaign=rainbow-color-text-c">Циклическая анимация радужного текста, реализованная с помощью CSS и JavaScript.
+                                    </a></li>
                                 </ul>
                                 <h4>CSS</h4>
                                 <ul>
+                                    <li><a href="#svg_anim">Постепенное появление SVG изображения на странице.</a></li>
                                     <li><a target="_blank" href="http://howtocenterincss.com/">Помощь в центрировании обьектов</a></li>
                                     <li><a target="_blank" href="https://basicweb.ru/css/flexbox_generator.php">Конструктор Flexbox</a></li>
                                     <li><a target="_blank" href="https://basicweb.ru/css/grid_generator.php">Конструктор Grid</a></li>
@@ -143,6 +153,8 @@
                                     <li><a target="_blank" href="https://stackoverflow.com/questions/4502633/how-to-affect-other-elements-when-one-element-is-hovered">Как ховером на один элемент влиять на другие </a></li>
                                     <li><a target="_blank" href="https://www.w3schools.com/cssref/css_selectors.asp">Операторы CSS</a></li>
                                     <li><a target="_blank" href="https://itchief.ru/html-and-css/selectors">Операторы CSS 2</a></li>
+                                    <li><a target="_blank" href="https://webformyself.com/effekt-matovogo-stekla-v-css/">Эффект матового стекла в CSS
+                                    </a></li>
                                 </ul>
                                 <h4>JS</h4>
                                 <ul>
@@ -737,6 +749,55 @@
                 <div id="collapse18" class="accordion-collapse collapse" aria-labelledby="heading18" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <a target="_blank" href="https://codepen.io/hryvaihor/pen/ZEXrBbw">codepen link</a> 
+                </div>
+                </div>
+            </div>
+            <!-- !!Постепенное появление SVG изображения на странице. -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading19">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse19" aria-expanded="false" aria-controls="collapse19">
+                    <span id=svg_anim >Постепенное появление SVG изображения на странице.</span>
+                </button>
+                </h2>
+                <div id="collapse19" class="accordion-collapse collapse" aria-labelledby="heading19" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>Постепенное появление изображения на странице. <br><br>
+
+                        Для эффекта необходимо изображение и его аутлайн (обводка) в формате SVG. <br>
+                        Вначале на экране плавно отрисовывается аутлайн, после появляется картинка и заменяет аутлайн. <br>
+                        
+                        Реализация происходит за счет анимации свойств SVG stroke-dasharray & stroke-dashoffset. <br>
+                        
+                        Эффект реализуется за счет HTML & CSS, отработка по ховеру или по ивенту (scroll, mouseon etc.) <br>
+                        </p>
+                    <a target="_blank" href="https://css-tricks.com/svg-line-animation-works/">link 1</a> <br>
+                    <a target="_blank" href="https://medium.com/@leandrasilver/self-drawing-svg-line-animation-a5cac51f6985">link 2 </a> 
+                </div>
+                </div>
+            </div>
+            <!-- !!кастомный видеоплеер. -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading20">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse20" aria-expanded="false" aria-controls="collapse20">
+                    <span id=custom_vp >Кастомный видеоплеер.</span> <br>
+                </button>
+                </h2>
+                <div id="collapse20" class="accordion-collapse collapse" aria-labelledby="heading20" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <a href="/img/avatar.png" download="">Ссылка на архив</a>
+                </div>
+                </div>
+            </div>
+            <!-- !!Клонирование обьекта. -->
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="heading21">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse21" aria-expanded="false" aria-controls="collapse21">
+                    <span id=clone_obj >Клонирование обьекта.</span> <br>
+                </button>
+                </h2>
+                <div id="collapse21" class="accordion-collapse collapse" aria-labelledby="heading21" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p> const clone = JSON.parse(JSON.stringify(obj));</p>
                 </div>
                 </div>
             </div>
