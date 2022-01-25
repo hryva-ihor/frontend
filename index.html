@@ -825,7 +825,7 @@
                 <div id="collapse22" class="accordion-collapse collapse" aria-labelledby="heading22" data-bs-parent="#accordionExample">
                 <div class="accordion-body">
                     <a target="_blank" href="https://docs.google.com/document/d/1JzKsNjznTklc2cOuN4MwHhoEe2SRiU4cdAhp7el8bkg/edit">Ссылка на docs.google</a> <br>
-                    <a href="/for_download/JS_KnowledgeBase_from_Hillel.zip" download="">Архив для загрузки</a>
+                    <a href="for_download/JS_KnowledgeBase_from_Hillel.zip" download="">Архив для загрузки</a>
                 </div>
                 </div>
             </div>
@@ -849,74 +849,7 @@
 
         </div>
     </main>
-    <!-- let obj_1 = {
-        a: {
-            cat: {
-                name: 'Tom',
-                age: 7
-            },
-            mouse: 'Jerry',
-        },
-        b: 20,
-        c: 30
-    };
-    
-    let obj_2 = {
-        b: 50,
-        c: 60,
-        d: 70,
-        j: [10,20,30, [40,50, [60,70, {cat: 'Anfisa'}]]]
-    };
-    
-    console.log(obj_1);
-    console.log(obj_2);
-    
-    function copiedArray(arr){
-        let newArr = [];
-    
-        for(let key in arr){
-            if(Array.isArray(arr[key])){
-                newArr[key] = copiedArray(arr[key]);
-            } else if(typeof arr[key] === 'object'){
-                newArr[key] = copiedObject(arr[key]);
-            } else{
-                newArr[key] = arr[key];
-            }
-        }
-    
-        return newArr;
-    }
-    
-    function copiedObject(obj){
-        let newObj = {};
-    
-        for(let key in obj){
-            if(Array.isArray(obj[key])){
-                newObj[key] = copiedArray(obj[key]);
-            } else if(typeof obj[key] === 'object'){
-                newObj[key] = copiedObject(obj[key]);
-            } else{
-                newObj[key] = obj[key];
-            }
-        }
-    
-        return newObj;
-    }
-    
-    function concatObjects(...args){
-        //console.log(args);
-    
-        let copiedObjects = args
-            .map(function(obj){
-                return copiedObject(obj);
-            }); // [obj_1, obj_2]
-    
-        return Object.assign({}, ...copiedObjects);
-    }
-    
-    let resultObj = concatObjects(obj_1, obj_2);
-    console.log(resultObj);
-    -->
+
     <!-- <div id="blog" class="blog border-bottom border-success">
         <div class="container py-5">
             <h2 class="text-center mb-4">Blog <i class="fa fa-comments-o" aria-hidden="true"></i></h2>
