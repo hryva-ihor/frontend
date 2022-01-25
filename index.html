@@ -101,7 +101,7 @@
                             <li><a href="#window_size">Актуальные размеры экрана</a></li>
                             <li><a href="#onLoad">Трекает когда сайт загружен</a></li>
                             <li><a href="#onStartFoo">Функция которая сама себя вызывает </a></li>
-
+                            <li><a href="#contrlFoo"> Функция controller</a></li>
                         </ul>
                         <ul>
                             <h5>Функции для обьектов</h5>
@@ -846,6 +846,41 @@
                 </div>
                 </div>
             </div>
+            <!-- !!Функция controller  -->
+            <div class="accordion-item">
+            <h2 class="accordion-header" id="heading24">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse24" aria-expanded="false" aria-controls="collapse24">
+                <span id=contrlFoo >Функция controller </span> <br>
+            </button>
+            </h2>
+            <div id="collapse24" class="accordion-collapse collapse" aria-labelledby="heading24" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+                <code>
+                    <pre><code>const controller = async (file, method=&quot;GET&quot;, obj) =&gt; { <br>
+                        <br>
+                        let options = {<br>
+                            method: method,<br>
+                            headers: {<br>
+                                &quot;content-type&quot;: &quot;application/json&quot;<br>
+                            }<br>
+                        }<br>
+                        <br>
+                        if(obj){<br>
+                            options.body = JSON.stringify(obj)<br>
+                        }<br>
+                        // запрос<br>
+                        let request = await fetch(file, options);<br>
+                        // проверка выполнения запроса<br>
+                        if(request.ok){<br>
+                            return request.json();<br>
+                        } else{<br>
+                            throw new Error(request.statusText);<br>
+                        }<br>
+                    }</code></pre>
+                </code>
+            </div>
+            </div>
+        </div>
 
         </div>
     </main>
